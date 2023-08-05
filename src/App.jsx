@@ -64,6 +64,20 @@ const catColors = {
     flagsOutline: "#000000",
   },
   variant4: {
+    leftCatSkinColor: "#2f2e2e",
+    leftCatGlasses: "#2f2e35",
+    leftCatDyedHair: "#6280c3",
+    leftCatPantsAndPiercing: "#987997",
+    rightCatSkinColor: "#b97b5c",
+    rightCatAccents: "#221116",
+    rightCatShoelacesTongueEyeAccent: "#ee0782",
+    rightCatBoots: "#040303",
+    catEarsAndBagHeart: "#ec6b6d",
+    catsEyesClothingAndBag: "#f1d3c8",
+    bodiesOutline: "#001419",
+    flagsOutline: "#000000",
+  },
+  variant5: {
     leftCatSkinColor: "#9d6152",
     leftCatGlasses: "#9d6152",
     leftCatDyedHair: "#f3d298",
@@ -110,6 +124,7 @@ function App() {
             <option value="variant2">Variant 2</option>
             <option value="variant3">Variant 3</option>
             <option value="variant4">Variant 4</option>
+            <option value="variant5">Variant 5</option>
           </select>
         </div>
       </div>
