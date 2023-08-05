@@ -15,18 +15,23 @@ const flagColors = {
   },
 };
 
+/* dark cat
+leftCatSkinColor: "#2f2e2e",
+leftCatGlasses: "#2f2e35",
+ */
+
 const catColors = {
   variant1: {
-    leftCatSkinColor: "#9f70bc",
-    leftCatGlasses: "#9f70bc",
-    leftCatDyedHair: "#488d86",
-    leftCatPantsAndPiercing: "#7975a6",
-    rightCatSkinColor: "#e244d6",
-    rightCatAccents: "#201e3f",
-    rightCatShoelacesTongueEyeAccent: "#55388c",
-    rightCatBoots: "#091b28",
-    catEarsAndBagHeart: "#c058e0",
-    catsEyesClothingAndBag: "#e4ace8",
+    leftCatSkinColor: "#bb7e86",
+    leftCatGlasses: "#d3abaa",
+    leftCatDyedHair: "#6280c3",
+    leftCatPantsAndPiercing: "#987997",
+    rightCatSkinColor: "#f66a33",
+    rightCatAccents: "#221116",
+    rightCatShoelacesTongueEyeAccent: "#ee0782",
+    rightCatBoots: "#040303",
+    catEarsAndBagHeart: "#ec6b6d",
+    catsEyesClothingAndBag: "#f1d3c8",
     bodiesOutline: "#001419",
     flagsOutline: "#000000",
   },
@@ -44,49 +49,68 @@ const catColors = {
     bodiesOutline: "#001419",
     flagsOutline: "#000000",
   },
+  variant3: {
+    leftCatSkinColor: "#2f2e2e",
+    leftCatGlasses: "#2f2e35",
+    leftCatDyedHair: "#6280c3",
+    leftCatPantsAndPiercing: "#987997",
+    rightCatSkinColor: "#f66a33",
+    rightCatAccents: "#221116",
+    rightCatShoelacesTongueEyeAccent: "#ee0782",
+    rightCatBoots: "#040303",
+    catEarsAndBagHeart: "#ec6b6d",
+    catsEyesClothingAndBag: "#f1d3c8",
+    bodiesOutline: "#001419",
+    flagsOutline: "#000000",
+  },
+  variant4: {
+    leftCatSkinColor: "#9d6152",
+    leftCatGlasses: "#9d6152",
+    leftCatDyedHair: "#f3d298",
+    leftCatPantsAndPiercing: "#987997",
+    rightCatSkinColor: "#f1c589",
+    rightCatAccents: "#221116",
+    rightCatShoelacesTongueEyeAccent: "#ee0782",
+    rightCatBoots: "#040303",
+    catEarsAndBagHeart: "#ec6b6d",
+    catsEyesClothingAndBag: "#f1d3c8",
+    bodiesOutline: "#001419",
+    flagsOutline: "#000000",
+  },
 };
 
 function App() {
   const [flagColor, setFlagColor] = useState(flagColors.bisexual);
-  const [primaryColor, setPrimaryColor] = useState("#DD5555");
-  const [secondaryColor, setSecondaryColor] = useState("#000000");
-  const [backgroundColor, setBackgroundColor] = useState("#ffffff");
+  const [catColor, setCatColor] = useState(catColors.variant1);
 
+  const changeFlagColor = (e) => {
+    console.log(e.target.value);
+    setFlagColor(flagColors[e.target.value]);
+  };
   return (
     <section>
       <h1>Pride cats color schemes</h1>
-      <div className="container">
+      <div className="containerMid">
         <div className="drawing">
-          <CatsColored flagColor={flagColor} />
+          <CatsColored catColor={catColor} flagColor={flagColor} />
         </div>
         <div className="inputs">
-          <div className="input">
-            <label htmlFor="">Primary</label>
-            <input
-              type="color"
-              value={primaryColor}
-              onChange={(e) => setPrimaryColor(e.target.value)}
-            />
-            <p>{primaryColor}</p>
-          </div>
-          <div className="input">
-            <label htmlFor="">Secondary</label>
-            <input
-              type="color"
-              value={secondaryColor}
-              onChange={(e) => setSecondaryColor(e.target.value)}
-            />
-            <p>{secondaryColor}</p>
-          </div>
-          <div className="input">
-            <label htmlFor="">Background</label>
-            <input
-              type="color"
-              value={backgroundColor}
-              onChange={(e) => setBackgroundColor(e.target.value)}
-            />
-            <p>{backgroundColor}</p>
-          </div>
+          <label htmlFor="">Flag:</label>
+          <select name="" id="" onChange={changeFlagColor}>
+            <option value="bisexual">Bisexual</option>
+            <option value="pansexual">Pansexual</option>
+          </select>
+          <label htmlFor="">Style:</label>
+          <select
+            name=""
+            id=""
+            onChange={(e) => setCatColor(catColors[e.target.value])}
+          >
+            <option value="variant1">Variant 1</option>
+            <option value="variant2">Variant 2</option>
+            <option value="variant3">Variant 3</option>
+            <option value="variant4">Variant 4</option>
+          </select>
         </div>
       </div>
     </section>

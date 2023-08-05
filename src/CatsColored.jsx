@@ -1,19 +1,7 @@
 /* eslint-disable react/prop-types */
 
-const CatsColored = ({ flagColor }) => {
-  const leftCatSkinColor = "#9f70bc";
-  const leftCatGlasses = "#9f70bc";
-  const leftCatDyedHair = "#488d86";
-  const leftCatPantsAndPiercing = "#7975a6";
-  const rightCatSkinColor = "#e244d6";
-  const rightCatAccents = "#201e3f";
-  const rightCatShoelacesTongueEyeAccent = "#55388c";
-  const rightCatBoots = "#091b28";
-  const catEarsAndBagHeart = "#c058e0";
-  const catsEyesClothingAndBag = "#e4ace8";
-  const white = "#00ff00";
-  const bodiesOutline = "#001419";
-  const flagsOutline = "#000000";
+const CatsColored = ({ catColor, flagColor }) => {
+  const white = "#000000";
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -3755,7 +3743,7 @@ const CatsColored = ({ flagColor }) => {
         />
       </g>
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 1256.79 572.75
   L 1257.91 569.25
@@ -6080,7 +6068,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 376.29 460.25
   Q 378.49 459.24 376.99 457.10
@@ -6299,7 +6287,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 915.00 347.04
   C 914.71 353.38 916.88 358.60 916.86 364.60
@@ -6557,7 +6545,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatDyedHair}
+        fill={catColor.leftCatDyedHair}
         d="
   M 543.90 319.02
   C 538.22 340.27 528.56 361.94 511.95 377.20
@@ -6615,7 +6603,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 657.88 323.82
   C 655.09 323.52 653.19 321.97 650.55 321.69
@@ -6652,7 +6640,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catEarsAndBagHeart}
+        fill={catColor.catEarsAndBagHeart}
         d="
   M 652.22 317.63
   Q 651.22 317.87 650.81 317.73
@@ -6669,7 +6657,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 1076.91 343.52
   C 1076.42 342.42 1072.71 342.70 1071.66 342.85
@@ -6702,7 +6690,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catEarsAndBagHeart}
+        fill={catColor.catEarsAndBagHeart}
         d="
   M 1074.75 338.75
   Q 1055.72 336.88 1039.52 336.61
@@ -6720,7 +6708,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 397.48 392.48
   C 397.77 389.46 396.49 387.94 396.05 385.15
@@ -6747,7 +6735,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catEarsAndBagHeart}
+        fill={catColor.catEarsAndBagHeart}
         d="
   M 399.72 386.20
   C 395.64 351.76 403.29 315.98 419.67 285.49
@@ -6761,7 +6749,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 871.42 329.35
   C 876.68 336.94 878.38 346.37 883.76 353.47
@@ -6793,7 +6781,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catEarsAndBagHeart}
+        fill={catColor.catEarsAndBagHeart}
         d="
   M 834.23 370.77
   C 830.28 372.83 825.99 375.59 823.48 379.38
@@ -6811,7 +6799,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 973.30 336.49
   Q 979.29 339.11 985.75 337.21
@@ -6821,7 +6809,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 952.92 339.75
   C 954.64 351.09 955.60 361.60 957.26 373.73
@@ -6835,7 +6823,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 926.84 343.80
   Q 928.60 357.87 929.28 372.00
@@ -6846,7 +6834,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 576.19 496.02
   Q 582.56 492.06 590.00 493.36
@@ -6887,7 +6875,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatGlasses}
+        fill={catColor.leftCatGlasses}
         d="
   M 673.01 410.72
   C 678.38 412.26 683.70 415.65 688.31 419.25
@@ -6924,7 +6912,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatGlasses}
+        fill={catColor.leftCatGlasses}
         d="
   M 482.61 416.09
   C 484.64 414.91 486.49 415.42 488.45 414.84
@@ -6961,7 +6949,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <rect
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         x="-1.65"
         y="-7.24"
         transform="translate(980.88,426.47) rotate(6.6)"
@@ -6970,7 +6958,7 @@ const CatsColored = ({ flagColor }) => {
         rx="1.38"
       />
       <rect
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         x="-1.82"
         y="-6.82"
         transform="translate(971.75,432.92) rotate(4.8)"
@@ -6979,7 +6967,7 @@ const CatsColored = ({ flagColor }) => {
         rx="1.27"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 624.54 429.67
   C 620.56 434.38 618.37 438.19 615.99 443.80
@@ -6991,7 +6979,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 623.84 443.76
   A 0.11 0.11 0.0 0 1 623.69 443.78
@@ -7005,7 +6993,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 887.19 435.02
   A 0.20 0.20 0.0 0 1 887.25 434.74
@@ -7019,7 +7007,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 538.94 448.88
   C 538.35 444.06 536.96 439.76 535.64 435.12
@@ -7031,7 +7019,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 527.84 436.45
   A 0.07 0.07 0.0 0 1 527.87 436.36
@@ -7045,7 +7033,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 905.54 451.84
   A 0.93 0.93 0.0 0 1 904.32 451.35
@@ -7059,7 +7047,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 1061.76 513.28
   L 1067.11 515.55
@@ -7108,7 +7096,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={flagsOutline}
+        fill={catColor.flagsOutline}
         d="
   M 1261.90 568.24
   L 1258.67 568.63
@@ -7199,7 +7187,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1008.50 475.96
   L 1005.54 476.50
@@ -7245,7 +7233,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 685.0260 467.4013
   A 44.40 40.44 -36.9 0 1 673.8010 526.3992
@@ -7261,7 +7249,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 556.0927 506.7527
   A 48.50 47.54 4.9 0 1 503.7093 549.9763
@@ -7277,7 +7265,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 681.8262 469.3012
   A 40.78 36.97 -37.4 0 1 671.8847 523.4395
@@ -7293,7 +7281,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 552.0701 509.9374
   A 45.08 43.74 9.2 0 1 500.5768 545.9073
@@ -7317,7 +7305,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 842.45 548.41
   C 815.85 529.18 816.93 492.20 845.10 475.08
@@ -7357,9 +7345,9 @@ const CatsColored = ({ flagColor }) => {
   Q 857.57 503.82 858.51 504.86
   Z"
       />
-      <circle fill={bodiesOutline} cx="648.97" cy="493.45" r="24.09" />
+      <circle fill={catColor.bodiesOutline} cx="648.97" cy="493.45" r="24.09" />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 873.79 500.75
   L 858.51 504.86
@@ -7371,7 +7359,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 1005.54 476.50
   L 1008.50 475.96
@@ -7415,7 +7403,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 500.52 501.64
   Q 499.93 499.70 501.08 497.99
@@ -7451,7 +7439,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatDyedHair}
+        fill={catColor.leftCatDyedHair}
         d="
   M 882.75 499.79
   L 882.25 499.71
@@ -7461,7 +7449,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 882.25 499.71
   L 882.75 499.79
@@ -7482,7 +7470,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 805.39 620.11
   C 801.43 627.40 790.80 649.34 801.94 653.84
@@ -7570,7 +7558,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 578.92 544.33
   C 584.02 543.23 602.50 544.01 601.62 552.96
@@ -7604,7 +7592,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 573.20 545.38
   C 565.40 540.65 557.35 549.94 563.96 556.17
@@ -7618,7 +7606,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 1092.28 550.34
   C 1101.05 547.74 1109.94 546.18 1118.96 544.69
@@ -7633,7 +7621,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 570.36 547.33
   C 568.13 549.19 566.69 550.60 566.21 553.83
@@ -7643,7 +7631,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 946.74 599.20
   Q 945.37 599.97 944.20 598.99
@@ -7699,7 +7687,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1207.83 724.74
   Q 1204.85 719.82 1204.24 718.00
@@ -7782,7 +7770,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 696.49 564.23
   C 680.27 567.55 666.70 570.73 648.16 577.75
@@ -7796,7 +7784,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 580.66 579.93
   C 575.83 584.29 572.58 587.76 565.73 588.14
@@ -7821,7 +7809,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 437.25 574.22
   C 452.96 572.70 467.29 574.47 486.43 576.57
@@ -7836,7 +7824,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 889.02 584.23
   C 869.42 580.73 850.71 580.28 830.87 579.88
@@ -7850,7 +7838,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 1053.68 588.44
   C 1067.17 585.71 1081.62 583.75 1095.30 583.15
@@ -7864,7 +7852,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 966.20 611.21
   Q 968.10 610.31 967.51 607.93
@@ -7883,7 +7871,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 668.48 597.72
   C 662.93 597.42 655.93 598.34 649.56 597.89
@@ -7896,7 +7884,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 497.23 597.29
   C 481.73 596.49 463.65 600.52 448.95 605.03
@@ -7909,7 +7897,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={bodiesOutline}
+        fill={catColor.bodiesOutline}
         d="
   M 891.59 608.42
   C 893.82 608.45 898.15 607.17 899.22 609.81
@@ -7922,7 +7910,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 805.39 620.11
   Q 810.37 625.58 817.36 628.51
@@ -7932,7 +7920,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 1100.79 753.00
   C 1097.48 736.68 1097.21 719.88 1095.94 703.31
@@ -8029,7 +8017,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 973.84 669.51
   C 983.93 671.49 987.65 671.10 997.94 668.07
@@ -8050,7 +8038,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 644.29 730.00
   L 644.54 732.75
@@ -8105,7 +8093,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 848.79 647.25
   C 850.25 648.22 857.35 651.57 857.51 652.71
@@ -8133,7 +8121,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 989.82 655.08
   C 996.81 652.79 1004.12 651.91 1011.25 649.42
@@ -8147,7 +8135,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 469.36 762.19
   C 477.30 763.74 476.90 756.97 477.80 751.76
@@ -8185,7 +8173,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 583.57 658.56
   C 584.89 657.06 584.92 655.78 585.73 654.00
@@ -8202,7 +8190,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 549.49 657.33
   C 548.83 656.72 547.24 655.85 546.41 654.95
@@ -8213,7 +8201,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1215.46 658.25
   Q 1217.27 670.88 1218.97 683.50
@@ -8223,7 +8211,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 477.60 724.25
   Q 476.84 725.15 477.54 726.00
@@ -8243,7 +8231,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={flagsOutline}
+        fill={catColor.flagsOutline}
         d="
   M 252.46 790.25
   C 252.11 790.67 248.67 794.12 248.71 791.70
@@ -8332,7 +8320,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1175.75 664.79
   Q 1175.24 678.88 1177.78 692.69
@@ -8367,7 +8355,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 819.50 701.04
   Q 816.99 700.84 814.49 700.64
@@ -8380,7 +8368,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={flagsOutline}
+        fill={catColor.flagsOutline}
         d="
   M 1100.79 753.00
   C 1100.43 755.09 1098.53 758.73 1101.46 759.75
@@ -8411,7 +8399,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1207.83 724.74
   Q 1202.16 725.22 1197.04 728.00
@@ -8439,7 +8427,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 268.13 811.47
   L 267.67 812.93
@@ -8519,7 +8507,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={flagsOutline}
+        fill={catColor.flagsOutline}
         d="
   M 887.54 725.00
   L 891.25 732.21
@@ -8579,7 +8567,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 724.80 911.19
   Q 724.52 911.84 724.89 912.96
@@ -8647,7 +8635,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catEarsAndBagHeart}
+        fill={catColor.catEarsAndBagHeart}
         d="
   M 445.93 807.69
   C 448.14 803.48 452.84 793.70 459.09 794.83
@@ -8680,7 +8668,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 232.25 879.24
   Q 232.51 879.32 232.59 879.06
@@ -8721,7 +8709,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <ellipse
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         cx="0.00"
         cy="0.00"
         transform="translate(1074.01,833.14) rotate(-28.0)"
@@ -8729,7 +8717,7 @@ const CatsColored = ({ flagColor }) => {
         ry="0.43"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 1103.71 832.50
   Q 1103.76 833.37 1103.96 834.21
@@ -8758,7 +8746,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 653.22 837.43
   L 656.05 870.98
@@ -8778,7 +8766,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 1061.50 852.54
   Q 1060.11 853.41 1058.50 853.46
@@ -8786,7 +8774,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1128.58 989.80
   Q 1114.36 989.78 1101.34 995.07
@@ -8897,7 +8885,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 495.89 1100.35
   Q 494.81 1099.15 494.66 1097.49
@@ -8922,7 +8910,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 475.56 919.86
   C 476.13 907.22 477.81 891.93 486.50 881.99
@@ -8936,7 +8924,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 632.50 912.25
   Q 632.06 900.60 634.99 889.21
@@ -8952,7 +8940,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 563.64 1093.17
   Q 562.65 1092.89 561.31 1093.85
@@ -9040,7 +9028,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 593.85 934.20
   Q 587.72 934.27 582.24 937.03
@@ -9071,7 +9059,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 308.91 998.84
   Q 311.23 993.22 310.73 988.75
@@ -9108,7 +9096,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={catsEyesClothingAndBag}
+        fill={catColor.catsEyesClothingAndBag}
         d="
   M 1069.79 896.25
   Q 1069.19 901.06 1066.64 905.15
@@ -9136,7 +9124,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1074.46 895.25
   Q 1074.10 901.09 1071.48 906.16
@@ -9165,7 +9153,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 582.25 898.70
   C 582.67 912.44 585.11 933.53 571.99 942.42
@@ -9179,7 +9167,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 905.24 924.88
   Q 906.32 928.61 903.85 931.61
@@ -9195,7 +9183,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 866.29 928.50
   C 865.29 938.76 872.66 949.20 879.15 955.99
@@ -9213,7 +9201,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 876.75 958.21
   L 879.08 956.60
@@ -9233,7 +9221,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatDyedHair}
+        fill={catColor.leftCatDyedHair}
         d="
   M 312.77 943.56
   L 311.74 944.61
@@ -9269,7 +9257,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 842.46 944.00
   Q 843.15 952.27 846.58 959.72
@@ -9282,7 +9270,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 800.30 954.81
   Q 797.91 969.56 804.53 982.96
@@ -9302,7 +9290,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 805.50 984.04
   Q 804.86 983.64 804.53 982.96
@@ -9317,7 +9305,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 767.75 962.82
   C 767.41 970.89 771.17 979.44 776.00 985.71
@@ -9329,7 +9317,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 913.00 962.99
   C 915.07 963.02 917.04 962.86 918.97 963.25
@@ -9341,7 +9329,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 735.46 998.75
   C 731.34 992.75 725.97 979.34 728.24 971.54
@@ -9354,7 +9342,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 728.24 971.54
   C 725.97 979.34 731.34 992.75 735.46 998.75
@@ -9369,7 +9357,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1044.62 995.27
   Q 1040.30 990.76 1041.26 984.32
@@ -9380,7 +9368,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatPantsAndPiercing}
+        fill={catColor.leftCatPantsAndPiercing}
         d="
   M 475.90 1062.93
   C 473.32 1061.27 469.27 1055.59 467.81 1052.65
@@ -9394,7 +9382,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1128.58 989.80
   C 1132.25 990.48 1133.22 1000.50 1129.75 1000.54
@@ -9405,7 +9393,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 462.01 1085.37
   A 1.04 1.04 0.0 0 0 461.84 1087.05
@@ -9435,7 +9423,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 696.21 991.00
   C 697.18 1000.77 700.24 1010.54 707.25 1017.71
@@ -9446,7 +9434,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 891.54 1004.50
   Q 901.52 1013.07 917.18 1019.28
@@ -9457,7 +9445,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 988.78 1019.20
   Q 983.91 1021.86 983.11 1027.17
@@ -9469,7 +9457,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1053.17 1051.78
   Q 1052.20 1046.17 1055.04 1041.68
@@ -9482,7 +9470,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 793.69 1172.72
   Q 792.70 1171.70 792.90 1170.79
@@ -9557,7 +9545,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 924.56 1091.31
   Q 912.37 1101.03 900.14 1110.32
@@ -9571,7 +9559,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1134.41 1055.75
   Q 1132.76 1057.48 1135.32 1058.14
@@ -9587,7 +9575,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 1138.21 1104.82
   Q 1138.55 1108.77 1138.64 1112.79
@@ -9602,7 +9590,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 1090.56 1160.56
   A 2.01 2.01 0.0 0 0 1091.49 1161.76
@@ -9676,7 +9664,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 894.79 1110.75
   Q 892.51 1114.87 888.00 1113.79
@@ -9688,7 +9676,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 872.50 1109.75
   Q 882.34 1111.70 887.51 1120.20
@@ -9704,7 +9692,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 783.67 1117.55
   A 0.46 0.46 0.0 0 1 783.07 1117.29
@@ -9718,7 +9706,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 764.51 1109.57
   C 768.57 1108.95 772.05 1110.83 774.51 1113.90
@@ -9760,7 +9748,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 894.79 1110.75
   L 896.29 1112.55
@@ -9772,7 +9760,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1126.18 1124.41
   Q 1107.51 1125.94 1092.22 1136.94
@@ -9789,7 +9777,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 867.42 1119.03
   C 872.76 1121.15 877.14 1121.77 880.86 1126.93
@@ -9805,7 +9793,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 532.18 1134.58
   Q 524.69 1138.75 516.19 1142.19
@@ -9818,7 +9806,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <ellipse
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         cx="0.00"
         cy="0.00"
         transform="translate(787.43,1125.51) rotate(65.8)"
@@ -9826,7 +9814,7 @@ const CatsColored = ({ flagColor }) => {
         ry="1.31"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 861.46 1213.75
   Q 853.83 1211.65 846.16 1209.69
@@ -9901,7 +9889,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1138.71 1134.00
   C 1135.20 1129.71 1128.55 1129.98 1123.48 1129.27
@@ -9911,7 +9899,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1146.00 1128.54
   Q 1147.63 1129.62 1148.21 1131.50
@@ -9919,7 +9907,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1123.48 1129.27
   C 1128.55 1129.98 1135.20 1129.71 1138.71 1134.00
@@ -9935,7 +9923,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 788.56 1137.66
   A 0.64 0.64 0.0 0 1 788.97 1136.86
@@ -9949,7 +9937,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <ellipse
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         cx="0.00"
         cy="0.00"
         transform="translate(543.78,1148.61) rotate(-36.5)"
@@ -9957,7 +9945,7 @@ const CatsColored = ({ flagColor }) => {
         ry="0.98"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1135.00 1150.96
   C 1141.51 1147.30 1137.69 1144.87 1133.75 1142.29
@@ -9971,7 +9959,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1133.75 1142.29
   C 1137.69 1144.87 1141.51 1147.30 1135.00 1150.96
@@ -9983,7 +9971,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={leftCatSkinColor}
+        fill={catColor.leftCatSkinColor}
         d="
   M 627.27 1209.75
   C 627.09 1210.38 627.21 1210.64 627.75 1210.98
@@ -10032,7 +10020,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 792.59 1154.85
   A 0.48 0.48 0.0 0 1 793.38 1154.42
@@ -10044,7 +10032,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 1125.97 1163.08
   Q 1117.70 1164.95 1109.81 1168.23
@@ -10057,7 +10045,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1112.00 1155.79
   Q 1111.18 1156.99 1109.64 1157.14
@@ -10067,7 +10055,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 787.98 1157.26
   Q 789.56 1158.38 789.85 1159.95
@@ -10082,7 +10070,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatBoots}
+        fill={catColor.rightCatBoots}
         d="
   M 1119.28 1205.64
   C 1118.77 1200.94 1118.70 1195.65 1117.90 1191.50
@@ -10158,7 +10146,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 1181.75 1178.00
   Q 1173.78 1179.13 1171.31 1172.45
@@ -10170,7 +10158,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatShoelacesTongueEyeAccent}
+        fill={catColor.rightCatShoelacesTongueEyeAccent}
         d="
   M 879.69 1176.06
   C 882.34 1178.55 882.36 1180.78 879.65 1183.25
@@ -10179,7 +10167,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 809.53 1188.45
   A 0.18 0.18 0.0 0 1 809.51 1188.71
@@ -10193,7 +10181,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <ellipse
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         cx="0.00"
         cy="0.00"
         transform="translate(817.85,1193.36) rotate(27.6)"
@@ -10201,7 +10189,7 @@ const CatsColored = ({ flagColor }) => {
         ry="1.14"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 828.03 1196.21
   C 831.13 1196.12 832.42 1198.37 835.31 1199.58
@@ -10211,7 +10199,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 845.70 1201.76
   C 847.51 1202.39 851.88 1203.66 851.96 1204.49
@@ -10221,7 +10209,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <ellipse
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         cx="0.00"
         cy="0.00"
         transform="translate(859.92,1205.61) rotate(12.7)"
@@ -10229,7 +10217,7 @@ const CatsColored = ({ flagColor }) => {
         ry="0.75"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1060.22 1206.30
   A 0.72 0.72 0.0 0 1 1061.24 1206.18
@@ -10243,7 +10231,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1189.92 1208.31
   C 1191.49 1207.41 1193.17 1206.03 1195.10 1206.13
@@ -10253,7 +10241,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1180.05 1210.84
   Q 1181.25 1209.92 1182.72 1209.75
@@ -10267,7 +10255,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <rect
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         x="-3.61"
         y="-1.35"
         transform="translate(1075.87,1214.72) rotate(15.1)"
@@ -10276,7 +10264,7 @@ const CatsColored = ({ flagColor }) => {
         rx="1.22"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1166.87 1212.99
   A 0.21 0.21 0.0 0 1 1167.12 1213.15
@@ -10290,7 +10278,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1069.10 1236.52
   C 1059.47 1232.77 1057.42 1226.47 1056.67 1216.91
@@ -10316,7 +10304,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1094.59 1219.93
   A 0.18 0.18 0.0 0 1 1094.68 1220.17
@@ -10330,7 +10318,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <rect
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         x="-4.36"
         y="-1.42"
         transform="translate(1145.26,1218.59) rotate(-8.9)"
@@ -10339,7 +10327,7 @@ const CatsColored = ({ flagColor }) => {
         rx="1.26"
       />
       <ellipse
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         cx="0.00"
         cy="0.00"
         transform="translate(1130.67,1220.26) rotate(4.9)"
@@ -10347,7 +10335,7 @@ const CatsColored = ({ flagColor }) => {
         ry="1.43"
       />
       <path
-        fill={rightCatSkinColor}
+        fill={catColor.rightCatSkinColor}
         d="
   M 1100.05 1222.43
   L 1098.81 1222.33
@@ -10359,7 +10347,7 @@ const CatsColored = ({ flagColor }) => {
   Z"
       />
       <path
-        fill={rightCatAccents}
+        fill={catColor.rightCatAccents}
         d="
   M 1101.31 1253.33
   Q 1097.59 1254.46 1093.00 1254.25
