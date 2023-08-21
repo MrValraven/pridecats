@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Modak&family=Rampart+One&display=swap');
+
+.slogan {
+  font-family: 'Modak', cursive;
+  font-size: 120px;
+  margin-right: -40px;
+  letter-spacing: 10px;
+}
+
+.firstSlogan {
+  margin-bottom: -105px;
+}
+
+.secondSlogan {
+  margin-top: -65px;
+}
+
 #root {
   padding: 2rem;
   width: 100%;
@@ -20,6 +37,18 @@ h1 {
 .drawing {
   width: 50%;
   margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+svg {
+  height: 550px;
+}
+
+.nonBinary {
+  width: 50%;
 }
 
 .containerMid {

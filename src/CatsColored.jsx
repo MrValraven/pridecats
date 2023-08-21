@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const CatsColored = ({ catColor, flagColor }) => {
+const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   const white = "#000000";
   return (
     <svg
@@ -6545,7 +6545,7 @@ const CatsColored = ({ catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={catColor.leftCatDyedHair}
+        fill={dyeColor}
         d="
   M 543.90 319.02
   C 538.22 340.27 528.56 361.94 511.95 377.20
@@ -7439,7 +7439,7 @@ const CatsColored = ({ catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={catColor.leftCatDyedHair}
+        fill={dyeColor}
         d="
   M 882.75 499.79
   L 882.25 499.71
@@ -9221,7 +9221,7 @@ const CatsColored = ({ catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={catColor.leftCatDyedHair}
+        fill={dyeColor}
         d="
   M 312.77 943.56
   L 311.74 944.61

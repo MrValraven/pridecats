@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CatsColored from "./CatsColored";
+import CatsNonBinary from "./assets/catsNonBinary.svg";
 import "./App.css";
 
 const flagColors = {
@@ -15,10 +16,18 @@ const flagColors = {
   },
 };
 
-/* dark cat
-leftCatSkinColor: "#2f2e2e",
-leftCatGlasses: "#2f2e35",
- */
+
+/* 
+
+Whites
+rgb(241, 242, 235)
+#F4FFF8
+#EFF2F1
+
+Blues:
+#4059ad
+
+*/
 
 const catColors = {
   variant1: {
@@ -31,7 +40,7 @@ const catColors = {
     rightCatShoelacesTongueEyeAccent: "#ee0782",
     rightCatBoots: "#040303",
     catEarsAndBagHeart: "#ec6b6d",
-    catsEyesClothingAndBag: "#f1d3c8",
+    catsEyesClothingAndBag: "#EFF2F1",
     bodiesOutline: "#001419",
     flagsOutline: "#000000",
   },
@@ -59,7 +68,7 @@ const catColors = {
     rightCatShoelacesTongueEyeAccent: "#ee0782",
     rightCatBoots: "#040303",
     catEarsAndBagHeart: "#ec6b6d",
-    catsEyesClothingAndBag: "#f1d3c8",
+    catsEyesClothingAndBag: "#fde3e3",
     bodiesOutline: "#001419",
     flagsOutline: "#000000",
   },
@@ -96,39 +105,62 @@ const catColors = {
 function App() {
   const [flagColor, setFlagColor] = useState(flagColors.bisexual);
   const [catColor, setCatColor] = useState(catColors.variant1);
+  const [dyeColor, setDyeColor] = useState(catColors.variant1.leftCatDyedHair);
+  const [backgroundColor, setBackgroundColor] = useState("#000000");
+  const [font, setFont] = useState("Modak");
+
 
   const changeFlagColor = (e) => {
     console.log(e.target.value);
     setFlagColor(flagColors[e.target.value]);
   };
   return (
-    <section>
-      <h1>Pride cats color schemes</h1>
-      <div className="containerMid">
-        <div className="drawing">
-          <CatsColored catColor={catColor} flagColor={flagColor} />
+    <>
+      <section style={{ backgroundColor: backgroundColor }}>
+        <div className="containerMid">
+          <div className="drawing">
+            <h2 className="slogan firstSlogan" style={{ fontFamily: font, color: catColor.catsEyesClothingAndBag }}>Wear your</h2>
+            <CatsColored dyeColor={dyeColor} catColor={catColor} flagColor={flagColor} />
+            <h2 className="slogan secondSlogan" style={{ fontFamily: font, color: catColor.catsEyesClothingAndBag }}>Colors</h2>
+          </div>
+          <div className="inputs">
+            <label htmlFor="">Font:</label>
+            <select value={font} name="" id="" onChange={(e) => setFont(e.target.value)}>
+              <option value="Lilita One">Lilita</option>
+              <option value="Modak">Modak</option>
+              <option value="Rampart One">Rampart</option>
+            </select>
+            <label>Background color</label>
+            <select value={backgroundColor} name="" id="" onChange={(e) => setBackgroundColor(e.target.value)}>
+              <option value="#000000">Black</option>
+              <option value="#FFFFFF">White</option>
+            </select>
+            <label>Hair color</label>
+            <input value={dyeColor} type="color" onChange={(e) => setDyeColor(e.target.value)} />
+            <label htmlFor="">Flag:</label>
+            <select name="" id="" onChange={changeFlagColor}>
+              <option value="bisexual">Bisexual</option>
+              <option value="pansexual">Pansexual</option>
+            </select>
+            <label htmlFor="">Style:</label>
+            <select
+              name=""
+              id=""
+              onChange={(e) => setCatColor(catColors[e.target.value])}
+            >
+              <option value="variant1">Variant 1</option>
+              <option value="variant2">Variant 2</option>
+              <option value="variant3">Variant 3</option>
+              <option value="variant4">Variant 4</option>
+              <option value="variant5">Variant 5</option>
+            </select>
+          </div>
         </div>
-        <div className="inputs">
-          <label htmlFor="">Flag:</label>
-          <select name="" id="" onChange={changeFlagColor}>
-            <option value="bisexual">Bisexual</option>
-            <option value="pansexual">Pansexual</option>
-          </select>
-          <label htmlFor="">Style:</label>
-          <select
-            name=""
-            id=""
-            onChange={(e) => setCatColor(catColors[e.target.value])}
-          >
-            <option value="variant1">Variant 1</option>
-            <option value="variant2">Variant 2</option>
-            <option value="variant3">Variant 3</option>
-            <option value="variant4">Variant 4</option>
-            <option value="variant5">Variant 5</option>
-          </select>
-        </div>
-      </div>
-    </section>
+      </section>
+      <section className="nonBinary">
+        <img src={CatsNonBinary} alt="" />
+      </section>
+    </>
   );
 }
 
