@@ -148,11 +148,11 @@ function App() {
               id=""
               onChange={(e) => setCatColor(catColors[e.target.value])}
             >
-              <option value="variant1">Variant 1</option>
-              <option value="variant2">Variant 2</option>
-              <option value="variant3">Variant 3</option>
+              <option value="variant1">Vintage Elegance</option>
+              <option value="variant2">Fairy dust</option>
+              <option value="variant3">Sunny Side Up</option>
               <option value="variant4">Variant 4</option>
-              <option value="variant5">Variant 5</option>
+              <option value="variant5">Pastel dream</option>
             </select>
           </div>
         </div>
