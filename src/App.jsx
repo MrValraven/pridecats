@@ -1,19 +1,58 @@
 import { useState } from "react";
 import CatsColored from "./CatsColored";
 import CatsNonBinary from "./assets/catsNonBinary.svg";
+import InvertedCats from "./assets/invertedCatsColored.svg";
+import CatVariant3Bi from "./assets/gatos_variant3_bi.svg";
+import CatVariant3Pan from "./assets/gatos_variant3_pan.svg";
+import CatVariant5Bi from "./assets/gatos_variant5_bi.svg";
+import CatVariant5Pan from "./assets/gatos_variant5_pan.svg";
 import "./App.css";
 
 const flagColors = {
   bisexual: {
-    top: "#d70370",
-    middle: "#9a4f97",
-    bottom: "#0138a9",
+    primaryCatBody: {
+      top: "#d70370",
+      middle: "#9a4f97",
+      bottom: "#0138a9",
+    },
+    primaryCatHand: {
+      top: "#d70370",
+      middle: "#9a4f97",
+      bottom: "#0138a9",
+    },
+    secondaryCatBody: {
+      top: "#d70370",
+      middle: "#9a4f97",
+      bottom: "#0138a9",
+    },
+    secondaryCatHand: {
+      top: "#d70370",
+      middle: "#9a4f97",
+      bottom: "#0138a9",
+    }
   },
   pansexual: {
-    top: "#fe218d",
-    middle: "#fed900",
-    bottom: "#21b0fe",
-  },
+    primaryCatBody: {
+      top: "#fe218d",
+      middle: "#fed900",
+      bottom: "#21b0fe",
+    },
+    primaryCatHand: {
+      top: "#fe218d",
+      middle: "#fed900",
+      bottom: "#21b0fe",
+    },
+    secondaryCatBody: {
+      top: "#fe218d",
+      middle: "#fed900",
+      bottom: "#21b0fe",
+    },
+    secondaryCatHand: {
+      top: "#fe218d",
+      middle: "#fed900",
+      bottom: "#21b0fe",
+    }
+  }
 };
 
 
@@ -73,11 +112,11 @@ const catColors = {
     flagsOutline: "#000000",
   },
   variant4: {
-    leftCatSkinColor: "#2f2e2e",
+    leftCatSkinColor: "#DA70D6",
     leftCatGlasses: "#2f2e35",
     leftCatDyedHair: "#6280c3",
     leftCatPantsAndPiercing: "#987997",
-    rightCatSkinColor: "#b97b5c",
+    rightCatSkinColor: "#e4a301",
     rightCatAccents: "#221116",
     rightCatShoelacesTongueEyeAccent: "#ee0782",
     rightCatBoots: "#040303",
@@ -105,7 +144,6 @@ const catColors = {
 function App() {
   const [flagColor, setFlagColor] = useState(flagColors.bisexual);
   const [catColor, setCatColor] = useState(catColors.variant1);
-  const [dyeColor, setDyeColor] = useState(catColors.variant1.leftCatDyedHair);
   const [backgroundColor, setBackgroundColor] = useState("#000000");
   const [font, setFont] = useState("Modak");
 
@@ -120,7 +158,10 @@ function App() {
         <div className="containerMid">
           <div className="drawing">
             <h2 className="slogan firstSlogan" style={{ fontFamily: font, color: catColor.catsEyesClothingAndBag }}>Wear your</h2>
-            <CatsColored dyeColor={dyeColor} catColor={catColor} flagColor={flagColor} />
+            <CatsColored
+              catColor={catColor}
+              flagColor={flagColor}
+            />
             <h2 className="slogan secondSlogan" style={{ fontFamily: font, color: catColor.catsEyesClothingAndBag }}>Colors</h2>
           </div>
           <div className="inputs">
@@ -135,8 +176,6 @@ function App() {
               <option value="#000000">Black</option>
               <option value="#FFFFFF">White</option>
             </select>
-            <label>Hair color</label>
-            <input value={dyeColor} type="color" onChange={(e) => setDyeColor(e.target.value)} />
             <label htmlFor="">Flag:</label>
             <select name="" id="" onChange={changeFlagColor}>
               <option value="bisexual">Bisexual</option>
@@ -151,14 +190,26 @@ function App() {
               <option value="variant1">Vintage Elegance</option>
               <option value="variant2">Fairy dust</option>
               <option value="variant3">Sunny Side Up</option>
-              <option value="variant4">Variant 4</option>
+              <option value="variant4">Sunflower</option>
               <option value="variant5">Pastel dream</option>
             </select>
           </div>
         </div>
       </section>
-      <section className="nonBinary">
+      <h1>Variant2: Non Binary</h1>
+      <section style={{ backgroundColor: backgroundColor }} className="nonBinary">
         <img src={CatsNonBinary} alt="" />
+        <img src={InvertedCats} alt="" />
+      </section>
+      <h1>Variant3: Sunny Side Up</h1>
+      <section style={{ backgroundColor: backgroundColor }} className="nonBinary">
+        <img src={CatVariant3Bi} alt="" />
+        <img src={CatVariant3Pan} alt="" />
+      </section>
+      <h1>Variant5: Pastel Dream</h1>
+      <section style={{ backgroundColor: backgroundColor }} className="nonBinary">
+        <img src={CatVariant5Bi} alt="" />
+        <img src={CatVariant5Pan} alt="" />
       </section>
     </>
   );

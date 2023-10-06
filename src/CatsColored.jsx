@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-const CatsColored = ({ dyeColor, catColor, flagColor }) => {
+const CatsColored = ({ catColor, flagColor }) => {
   const white = "#000000";
   return (
     <svg
@@ -6545,7 +6545,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={dyeColor}
+        fill={catColor.leftCatDyedHair}
         d="
   M 543.90 319.02
   C 538.22 340.27 528.56 361.94 511.95 377.20
@@ -7203,7 +7203,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.top}
+        fill={flagColor.secondaryCatHand.top}
         d="
   M 1375.96 474.25
   C 1356.17 477.43 1338.51 481.61 1320.59 491.36
@@ -7388,7 +7388,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.middle}
+        fill={flagColor.secondaryCatHand.middle}
         d="
   M 1375.96 474.25
   L 1379.53 496.14
@@ -7421,7 +7421,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.bottom}
+        fill={flagColor.secondaryCatHand.bottom}
         d="
   M 1379.53 496.14
   C 1380.92 506.17 1381.62 516.17 1384.57 526.07
@@ -7439,7 +7439,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={dyeColor}
+        fill={catColor.leftCatDyedHair}
         d="
   M 882.75 499.79
   L 882.25 499.71
@@ -8331,7 +8331,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.top}
+        fill={flagColor.primaryCatHand.top}
         d="
   M 199.96 699.75
   C 178.79 709.63 159.64 722.10 140.15 734.85
@@ -8410,7 +8410,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.middle}
+        fill={flagColor.primaryCatHand.middle}
         d="
   M 199.96 699.75
   L 210.88 724.26
@@ -8471,7 +8471,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.bottom}
+        fill={flagColor.primaryCatHand.bottom}
         d="
   M 210.88 724.26
   Q 216.51 735.14 221.28 746.69
@@ -8491,7 +8491,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.top}
+        fill={flagColor.secondaryCatBody.top}
         d="
   M 1092.28 724.75
   L 1095.21 768.00
@@ -8523,7 +8523,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.top}
+        fill={flagColor.primaryCatBody.top}
         d="
   M 644.46 734.00
   L 647.21 774.00
@@ -8538,7 +8538,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.middle}
+        fill={flagColor.secondaryCatBody.middle}
         d="
   M 1095.21 768.00
   C 1096.39 776.55 1095.25 785.23 1097.53 794.18
@@ -8552,7 +8552,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.middle}
+        fill={flagColor.primaryCatBody.middle}
         d="
   M 647.21 774.00
   L 650.16 797.92
@@ -8610,7 +8610,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.bottom}
+        fill={flagColor.secondaryCatBody.bottom}
         d="
   M 1097.53 794.18
   Q 1100.01 812.60 1103.54 831.00
@@ -8650,7 +8650,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={flagColor.bottom}
+        fill={flagColor.primaryCatBody.bottom}
         d="
   M 500.57 796.92
   C 510.73 799.11 521.98 802.19 530.86 803.78
@@ -9221,7 +9221,7 @@ const CatsColored = ({ dyeColor, catColor, flagColor }) => {
   Z"
       />
       <path
-        fill={dyeColor}
+        fill={catColor.leftCatDyedHair}
         d="
   M 312.77 943.56
   L 311.74 944.61

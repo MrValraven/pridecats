@@ -12,7 +12,7 @@
 }
 
 .secondSlogan {
-  margin-top: -65px;
+  margin-top: -70px;
 }
 
 #root {
@@ -48,6 +48,11 @@ svg {
 }
 
 .nonBinary {
+  width: 100%;
+  display: flex;
+}
+
+.nonBinary img {
   width: 50%;
 }
 
